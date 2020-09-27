@@ -34,9 +34,27 @@
         </div>
       </div>
       <ul class="thumb">
-        <li><img src="media/pepsi001.png" alt="Pepsi" /></li>
-        <li><img src="media/pepsi002.png" alt="Pepsi" /></li>
-        <li><img src="media/pepsi003.png" alt="Pepsi" /></li>
+        <li>
+          <img
+            src="media/pepsi001.png"
+            alt="Pepsi"
+            onClick="imgSlider('media/pepsi001.png');changeBg('#0062be')"
+          />
+        </li>
+        <li>
+          <img
+            src="media/pepsi002.png"
+            alt="Pepsi"
+            onClick="imgSlider('media/pepsi002.png');changeBg('#e60c2c')"
+          />
+        </li>
+        <li>
+          <img
+            src="media/pepsi003.png"
+            alt="Pepsi"
+            onClick="imgSlider('media/pepsi003.png');changeBg('#1e1e1e')"
+          />
+        </li>
       </ul>
       <ul class="social">
         <li>
@@ -50,5 +68,16 @@
         </li>
       </ul>
     </section>
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".pepsi").src = anything;
+      }
+
+      function changeBg(color) {
+        const section = document.querySelector(".section");
+        section.style.background = color;
+      }
+    </script>
   </body>
 </html>
